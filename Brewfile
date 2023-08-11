@@ -57,12 +57,12 @@ brew "zplug"
 brew "zsh"
 brew "jesseduffield/lazygit/lazygit"
 brew "stripe/stripe-cli/stripe"
-cask "alfred"
 cask "docker"
 cask "expressvpn"
 cask "iterm2"
 cask "ngrok"
 cask "postico"
+cask "raycast"
 cask "spotify"
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
