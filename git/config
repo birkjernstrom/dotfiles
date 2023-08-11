@@ -1,0 +1,48 @@
+# My Git configurations
+
+[core]
+    editor=nvim
+    pager = delta
+    excludesfile = ~/.dotfiles/git/ignore
+
+[user]
+    name = Birk Jernström
+    email = birkjernstrom@gmail.com
+    signingkey = birkjernstrom@gmail.com
+
+[commit]
+    gpgsign = true
+
+[tag]
+    gpgsign = true
+
+[color]
+    branch=true
+    diff=true
+    decorate=true
+    grep=true
+    interactive=true
+    pager=true
+    showbranch=true
+    status=true
+    ui=true
+
+[alias]
+    update-submodules = !"git submodule update && git submodule foreach git submodule update"
+    init-submodules = !"git submodule init && git submodule foreach git submodule init"
+
+[init]
+	defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default

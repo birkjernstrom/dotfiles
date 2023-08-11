@@ -1,0 +1,28 @@
+# Regular aliases
+alias n='nvim .'
+alias ..='cd ..'
+alias _='cd -'
+
+alias t='tmux'
+
+# zoxide override
+alias cd='z'
+
+# exa overrides
+alias ls='exa'
+alias ll='exa -alh'
+alias tree='exa --tree'
+
+# bat overrides
+alias cat='bat'
+
+# git
+alias g='git'
+alias gp='git push'
+alias gpo='git push -u origin'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gs='git status'
+alias gc='git commit'
+alias gd='git diff'
+alias gc='git checkout'

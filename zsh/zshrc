@@ -1,0 +1,33 @@
+if [[ -f ~/.zshrc.before ]]; then
+    source ~/.zshrc.before
+fi
+
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "mafredri/zsh-async", from:github
+zplug "zdharma/fast-syntax-highlighting", as:plugin, defer:2
+
+zplug load
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Setup aliases & environment 
+source ~/.dotfiles/zsh/lib/environment
+source ~/.dotfiles/zsh/lib/aliases
+
+# Python config
+source ~/.dotfiles/zsh/lib/python
+
+# Starship
+eval "$(starship init zsh)"
+
+if [[ -f ~/.zshrc.after ]]; then
+    source ~/.zshrc.after
+fi

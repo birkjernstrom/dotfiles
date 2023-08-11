@@ -1,0 +1,17 @@
+*.~
+*.o
+*.swp
+*.nfs*
+tmp.*
+.DS_Store
+
+build/
+
+# Cocoa development
+*~.nib
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+xuserdata

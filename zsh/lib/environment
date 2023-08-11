@@ -1,0 +1,37 @@
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+# Brew
+export PATH=/usr/local/sbin:$PATH
+export PATH=/opt/homebrew/bin/:$PATH
+
+# GPG
+export GPG_TTY=$(tty)
+
+# pnpm
+export PNPM_HOME="~/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
+fi
+
+# fzf: Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# fzf: Key bindings
+# ------------
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+
+# fzf: Config
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# neovim
+export EDITOR="nvim"

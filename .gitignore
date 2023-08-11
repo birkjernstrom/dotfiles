@@ -1,0 +1,8 @@
+*.swp
+*.pyc
+*.pyo
+
+src/vim/swaps/*
+src/vim/backups/*
+src/vim/undo/*
+src/tmux/plugins
