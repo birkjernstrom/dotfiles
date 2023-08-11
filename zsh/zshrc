@@ -21,6 +21,7 @@ fi
 # Setup aliases & environment 
 source ~/.dotfiles/zsh/lib/environment
 source ~/.dotfiles/zsh/lib/aliases
+source ~/.dotfiles/zsh/lib/functions.sh
 
 # Python config
 source ~/.dotfiles/zsh/lib/python

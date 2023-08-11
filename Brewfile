@@ -57,19 +57,21 @@ brew "zplug"
 brew "zsh"
 brew "jesseduffield/lazygit/lazygit"
 brew "stripe/stripe-cli/stripe"
+cask "1password"
+cask "discord"
 cask "docker"
 cask "expressvpn"
 cask "google-chrome"
 cask "iterm2"
 cask "ngrok"
+cask "obsidian"
 cask "postico"
 cask "raycast"
 cask "spotify"
+cask "whatsapp"
 mas "Developer", id: 640199958
-mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
 mas "Medis", id: 1579200037
 mas "MKPlayer", id: 1335612105
 mas "NetSpot", id: 514951692
@@ -78,7 +80,6 @@ mas "Pages", id: 409201541
 mas "Speedtest", id: 1153157709
 mas "TestFlight", id: 899247664
 mas "Todoist", id: 585829637
-mas "Tweetbot", id: 1384080005
 mas "Wake Up Time", id: 495945638
 mas "Xcode", id: 497799835
 vscode "BeeverFeever.kanagawa-vscode"
