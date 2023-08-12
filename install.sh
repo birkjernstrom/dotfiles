@@ -26,6 +26,7 @@ bind "${HOME}/.config/nvim" "${HOME}/${DOTFILES}/nvim"
 bind "${HOME}/.config/yabai" "${HOME}/${DOTFILES}/yabai"
 bind "${HOME}/.config/skhd" "${HOME}/${DOTFILES}/skhd"
 bind "${HOME}/.config/alacritty" "${HOME}/${DOTFILES}/alacritty"
+bind "${HOME}/.config/starship.toml" "${HOME}/${DOTFILES}/starship.toml"
 
 # Configure macOS
 echo ".dotfiles/install => macOS configurations"
