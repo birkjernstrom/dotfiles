@@ -2,8 +2,6 @@
 alias n='nvim .'
 alias ..='cd ..'
 alias _='cd -'
-
-alias t='tmux'
 alias ll='ls -ahl'
 
 # zoxide override
