@@ -20,6 +20,13 @@ if [ "$TMUX_RUNNING" -eq 0 ]; then
 	fi
 fi
 
+TMUXP_TEMPLATE=~/.config/tmuxp/$1.yaml
+if [ -e $TMUXP_TEMPLATE ]; then
+	echo "Found & Loading Tmuxp template: ${TMUXP_TEMPLATE}"
+	tmuxp load "${1}"
+	exit
+fi
+
 # display help text with an argument
 if [ "$1" = "-h" ] || [ "$1" == "--help" ]; then
 	printf "\n"

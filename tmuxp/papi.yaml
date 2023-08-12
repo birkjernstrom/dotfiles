@@ -1,0 +1,13 @@
+root: ~/dev/polar/server
+session_name: polar-api
+
+windows:
+  - window_name: code
+    focus: True
+    layout: main-horizontal
+    options:
+      main-pane-height: 80
+    panes:
+      - echo "1 pane"
+      - echo "2 pane"
+      - echo "3 pane"

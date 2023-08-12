@@ -35,3 +35,6 @@ eval "$(zoxide init zsh)"
 
 # neovim
 export EDITOR="nvim"
+
+# tmuxp
+export DISABLE_AUTO_TITLE='true'
