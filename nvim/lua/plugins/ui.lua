@@ -3,7 +3,8 @@ return {
   {
     "rebelot/kanagawa.nvim",
     opts = {
-    }
+      transparent = true,
+    },
   },
 
   -- Configure LazyVim to load gruvbox

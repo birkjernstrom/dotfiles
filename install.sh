@@ -23,6 +23,9 @@ bind "${HOME}/.gitconfig" "${HOME}/${DOTFILES}/git/config"
 bind "${HOME}/.zshrc" "${HOME}/${DOTFILES}/zsh/zshrc"
 bind "${HOME}/.config/tmux" "${HOME}/${DOTFILES}/tmux"
 bind "${HOME}/.config/nvim" "${HOME}/${DOTFILES}/nvim"
+bind "${HOME}/.config/yabai" "${HOME}/${DOTFILES}/yabai"
+bind "${HOME}/.config/skhd" "${HOME}/${DOTFILES}/skhd"
+bind "${HOME}/.config/alacritty" "${HOME}/${DOTFILES}/alacritty"
 
 # Configure macOS
 echo ".dotfiles/install => macOS configurations"
