@@ -6,21 +6,24 @@ return {
       transparent = true,
     },
   },
+
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
-    opts = {
-      transparent_background = true,
-      flavour = "macchiato",
-    },
+    config = function()
+      require("tokyonight").setup({
+        style = "night",
+        transparent = true,
+      })
+    end,
   },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load tokyonight
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }
