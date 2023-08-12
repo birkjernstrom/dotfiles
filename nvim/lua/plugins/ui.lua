@@ -1,5 +1,5 @@
 return {
-  -- add kanagawa
+  -- Colorschemes
   {
     "rebelot/kanagawa.nvim",
     opts = {
@@ -15,6 +15,10 @@ return {
       require("tokyonight").setup({
         style = "night",
         transparent = true,
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
       })
     end,
   },
