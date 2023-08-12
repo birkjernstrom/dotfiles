@@ -4,14 +4,10 @@ alias ..='cd ..'
 alias _='cd -'
 
 alias t='tmux'
+alias ll='ls -ahl'
 
 # zoxide override
 alias cd='z'
-
-# exa overrides
-alias ls='exa'
-alias ll='exa -alh'
-alias tree='exa --tree'
 
 # bat overrides
 alias cat='bat'
