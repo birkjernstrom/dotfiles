@@ -2,13 +2,17 @@
 alias n='nvim .'
 alias ..='cd ..'
 alias _='cd -'
-alias ll='ls -ahl'
 
 # zoxide override
 alias cd='z'
 
 # bat overrides
 alias cat='bat'
+
+# exa overrides
+alias ls='exa'
+alias ll='exa -ahl'
+alias tree='exa --tree'
 
 # git
 alias g='git'
