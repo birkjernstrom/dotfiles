@@ -1,0 +1,15 @@
+start_directory: ~/dev/polar/clients
+session_name: polar-clients
+
+windows:
+  - window_name: code
+    window_index: 1
+    panes:
+      - shell_command:
+        - nvim .
+      - shell_command:
+        -
+  - window_name: processes
+    window_index: 2
+    panes:
+      - pnpm dev
