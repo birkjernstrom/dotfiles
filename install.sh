@@ -1,6 +1,6 @@
 function bind {
 	if [ -L $1 ]; then
-		return
+		mv $1 "${1}.bk"
 	fi
 
 	if [ -f $1 ]; then
