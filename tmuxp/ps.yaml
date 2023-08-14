@@ -20,4 +20,4 @@ windows:
     window_index: 3
     panes:
       - ngrok start polar-api
-      -
+      - stripe listen --forward-to http://127.0.0.1:8000/api/v1/integrations/stripe/webhook
