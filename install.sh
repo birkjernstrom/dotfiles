@@ -1,6 +1,11 @@
 function bind {
 	if [ -L $1 ]; then
-		mv $1 "${1}.bk"
+    if [ "$(readlink -- "${1}")" = $2 ]; then
+      echo "Already symlinked ${1} to ${2}"
+      return
+    fi
+    echo "ERROR: Symlink exists for ${1} for different path. Handle manually."
+    return
 	fi
 
 	if [ -f $1 ]; then
@@ -13,10 +18,11 @@ DOTFILES=".dotfiles"
 cd $DOTFILES
 
 # Brew install
-echo ".dotfiles/install => Brew"
+echo "==> Brew install"
 brew bundle install
 
 # Dotfile configurations
+echo "==> Setup dotfiles"
 echo ".dotfiles/install => config files"
 bind "${HOME}/.gitignore" "${HOME}/${DOTFILES}/git/ignore"
 bind "${HOME}/.gitconfig" "${HOME}/${DOTFILES}/git/config"
@@ -29,6 +35,14 @@ bind "${HOME}/.config/skhd" "${HOME}/${DOTFILES}/skhd"
 bind "${HOME}/.config/alacritty" "${HOME}/${DOTFILES}/alacritty"
 bind "${HOME}/.config/starship.toml" "${HOME}/${DOTFILES}/starship.toml"
 
+# Other dependencies
+echo "==> Setup dotfile dependencies"
+if [[ ! -d "${HOME}/.config/tmux/plugins/tpm" ]]; then
+  echo "Cloning Tmux TPM"
+  git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+fi
+
 # Configure macOS
-echo ".dotfiles/install => macOS configurations"
+echo "==> MacOS Configuration"
 ./macOS/config.sh
+
