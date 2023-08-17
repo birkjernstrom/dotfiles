@@ -10,7 +10,7 @@ export PATH=/opt/homebrew/bin/:$PATH
 export GPG_TTY=$(tty)
 
 # pnpm
-export PNPM_HOME="~/Library/pnpm"
+export PNPM_HOME=~/Library/pnpm
 export PATH="$PNPM_HOME:$PATH"
 
 # Setup fzf
