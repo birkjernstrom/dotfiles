@@ -7,6 +7,8 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "mafredri/zsh-async", from:github
 zplug "zdharma/fast-syntax-highlighting", as:plugin, defer:2
+zplug "jeffreytse/zsh-vi-mode"
+
 
 zplug load
 
