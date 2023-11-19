@@ -83,6 +83,7 @@ return
           -- clangd = {},
           -- gopls = {},
           pyright = {},
+          ruff_lsp = {},
           rust_analyzer = {},
           tsserver = {},
           cssls = {},
