@@ -9,7 +9,7 @@ return
       dependencies = { "nvim-tree/nvim-web-devicons" },
       --
       init = function()
-        vim.keymap.set('n', '<leader>o', '<cmd>Oil .<cr>', { desc = '[O]il Open CWD' })
+        vim.keymap.set('n', '<leader>o', '<cmd>Oil --float<cr>', { desc = '[O]il open parent directory' })
       end,
     }
   }
