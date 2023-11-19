@@ -20,7 +20,7 @@ Kickstart.nvim is a template for your own configuration.
 
 require('birk.config')
 require('birk.keymap')
-require('birk.plugin_manager')
+require('birk.lazy')
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
