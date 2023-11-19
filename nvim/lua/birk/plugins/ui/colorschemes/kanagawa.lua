@@ -1,12 +1,17 @@
 return
 {
     "rebelot/kanagawa.nvim",
+    priority = 1000,
     opts = {
       transparent = true,
+      terminalColors = false,
       colors = {
         theme = {
           all = {
             ui = {
+              float = {
+                bg = "none",
+              },
               bg_gutter = "none",
             },
           },
@@ -22,7 +27,7 @@ return
           -- Save an hlgroup with dark background and dimmed foreground
           -- so that you can use it where your still want darker windows.
           -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
-          NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+          NormalDark = { fg = theme.ui.fg_dim, bg = "none" },
 
           -- Popular plugins that open floats will link to NormalFloat by default;
           -- set their background accordingly if you wish to keep them dark and borderless
@@ -32,6 +37,6 @@ return
       end,
     },
     config = function()
-      vim.cmd.colorscheme 'kanagawa'
+      vim.cmd.colorscheme 'kanagawa-dragon'
     end,
 }
