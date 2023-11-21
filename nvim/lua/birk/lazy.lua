@@ -29,4 +29,12 @@ require('lazy').setup({
   { import = 'birk.plugins.git' },
   { import = 'birk.plugins.ui' },
   { import = 'birk.plugins.ui.colorschemes' },
-}, {})
+}, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+})
