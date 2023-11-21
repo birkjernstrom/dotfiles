@@ -24,7 +24,7 @@ require('lazy').setup({
   -- https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'birk.plugins' },
   { import = 'birk.plugins.editor' },
-  { import = 'birk.plugins.lsp' },
+  { import = 'birk.plugins.lang' },
   { import = 'birk.plugins.coding' },
   { import = 'birk.plugins.git' },
   { import = 'birk.plugins.ui' },
