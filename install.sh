@@ -32,6 +32,8 @@ bind "${HOME}/.config/tmuxp" "${HOME}/${DOTFILES}/tmuxp"
 bind "${HOME}/.config/nvim" "${HOME}/${DOTFILES}/nvim"
 bind "${HOME}/.config/alacritty" "${HOME}/${DOTFILES}/alacritty"
 bind "${HOME}/.config/wezterm" "${HOME}/${DOTFILES}/wezterm"
+bind "${HOME}/.config/skhd" "${HOME}/${DOTFILES}/skhd"
+bind "${HOME}/.config/yabai" "${HOME}/${DOTFILES}/yabai"
 bind "${HOME}/.config/starship.toml" "${HOME}/${DOTFILES}/starship.toml"
 
 # Other dependencies
