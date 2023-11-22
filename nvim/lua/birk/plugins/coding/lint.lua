@@ -1,5 +1,4 @@
-return
-{
+return {
   {
     'mfussenegger/nvim-lint',
     event = {
@@ -9,19 +8,17 @@ return
     dependencies = {
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
-      'rshkarin/mason-nvim-lint',
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
     },
     config = function()
-      local lint = require('lint')
-      local mason_lint = require('mason-nvim-lint')
-
-      mason_lint.setup({
+      require('mason-tool-installer').setup {
         ensure_installed = {
           'eslint_d',
           'ruff',
         },
-      })
+      }
 
+      local lint = require 'lint'
       lint.linters_by_ft = {
         javascript = { 'eslint_d' },
         typescript = { 'eslint_d' },

@@ -86,7 +86,6 @@ return
       ruff_lsp = { filestypes = { 'python' } },
       rust_analyzer = {},
       tsserver = {},
-      cssls = {},
       tailwindcss = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
 
