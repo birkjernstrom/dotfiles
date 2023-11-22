@@ -47,3 +47,10 @@ opt.termguicolors = true
 
 -- Show relative linenumbers - easier navigation
 opt.relativenumber = true
+
+-- Spaces for tabs etc
+opt.expandtab = true
+opt.tabstop = 2
+opt.smartindent = true
+opt.shiftround = true
+opt.shiftwidth = 2
