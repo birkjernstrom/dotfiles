@@ -51,6 +51,11 @@ opt.relativenumber = true
 -- Spaces for tabs etc
 opt.expandtab = true
 opt.tabstop = 2
+opt.softtabstop = 2
 opt.smartindent = true
 opt.shiftround = true
 opt.shiftwidth = 2
+
+-- 80 width column
+opt.textwidth = 80
+opt.colorcolumn = '+1'
