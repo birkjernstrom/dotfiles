@@ -28,11 +28,7 @@ return {
       output = { open_on_run = true },
       quickfix = {
         open = function()
-          if require('lazyvim.util').has 'trouble.nvim' then
-            require('trouble').open { mode = 'quickfix', focus = false }
-          else
-            vim.cmd 'copen'
-          end
+          require('trouble').open { mode = 'quickfix', focus = false }
         end,
       },
     },
@@ -48,34 +44,32 @@ return {
         },
       }, neotest_ns)
 
-      if require('lazyvim.util').has 'trouble.nvim' then
-        opts.consumers = opts.consumers or {}
-        -- Refresh and auto close trouble after running tests
-        ---@type neotest.Consumer
-        opts.consumers.trouble = function(client)
-          client.listeners.results = function(adapter_id, results, partial)
-            if partial then
-              return
-            end
-            local tree = assert(client:get_position(nil, { adapter = adapter_id }))
-
-            local failed = 0
-            for pos_id, result in pairs(results) do
-              if result.status == 'failed' and tree:get_key(pos_id) then
-                failed = failed + 1
-              end
-            end
-            vim.schedule(function()
-              local trouble = require 'trouble'
-              if trouble.is_open() then
-                trouble.refresh()
-                if failed == 0 then
-                  trouble.close()
-                end
-              end
-            end)
-            return {}
+      opts.consumers = opts.consumers or {}
+      -- Refresh and auto close trouble after running tests
+      ---@type neotest.Consumer
+      opts.consumers.trouble = function(client)
+        client.listeners.results = function(adapter_id, results, partial)
+          if partial then
+            return
           end
+          local tree = assert(client:get_position(nil, { adapter = adapter_id }))
+
+          local failed = 0
+          for pos_id, result in pairs(results) do
+            if result.status == 'failed' and tree:get_key(pos_id) then
+              failed = failed + 1
+            end
+          end
+          vim.schedule(function()
+            local trouble = require 'trouble'
+            if trouble.is_open() then
+              trouble.refresh()
+              if failed == 0 then
+                trouble.close()
+              end
+            end
+          end)
+          return {}
         end
       end
 
