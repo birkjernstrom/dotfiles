@@ -5,7 +5,7 @@ local config = {
 	-- color_scheme = 'kanagawabones',
 	font = wezterm.font("BerkeleyMono Nerd Font Mono", { weight = "Regular", italic = false }),
 	font_size = 14,
-	color_scheme = "tokyonight",
+	color_scheme = "rose-pine",
 	window_background_opacity = 0.95,
 	window_padding = {
 		left = 2,
