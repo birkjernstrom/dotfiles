@@ -1,12 +1,14 @@
 local wezterm = require("wezterm")
+local rose_pine = require("rose-pine")
+
 local config = {
 	adjust_window_size_when_changing_font_size = false,
 
-	-- color_scheme = 'kanagawabones',
 	font = wezterm.font("BerkeleyMono Nerd Font Mono", { weight = "Regular", italic = false }),
 	font_size = 14,
-	color_scheme = "rose-pine",
-	window_background_opacity = 0.95,
+	colors = rose_pine.colors(),
+	window_frame = rose_pine.window_frame(),
+	window_background_opacity = 0.9,
 	window_padding = {
 		left = 2,
 		right = 2,
