@@ -26,7 +26,6 @@ require('lazy').setup({
   { import = 'birk.plugins.editor' },
   { import = 'birk.plugins.lang' },
   { import = 'birk.plugins.coding' },
-  { import = 'birk.plugins.git' },
   { import = 'birk.plugins.ui' },
   { import = 'birk.plugins.ui.colorschemes' },
 }, {
