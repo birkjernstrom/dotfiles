@@ -7,13 +7,14 @@ local config = {
 	font = wezterm.font("BerkeleyMono Nerd Font Mono", { weight = "Regular", italic = false }),
 	font_size = 14,
 	colors = rose_pine.colors(),
+	window_decorations = "RESIZE",
 	window_frame = rose_pine.window_frame(),
 	window_background_opacity = 0.9,
 	window_padding = {
-		left = 2,
-		right = 2,
-		top = 0,
-		bottom = 0,
+		left = 30,
+		right = 30,
+		top = 30,
+		bottom = 10,
 	},
 
 	hide_tab_bar_if_only_one_tab = true,
