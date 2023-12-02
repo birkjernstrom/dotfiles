@@ -1,7 +1,10 @@
 # Regular aliases
-alias n='nvim .'
 alias ..='cd ..'
 alias _='cd -'
+
+# zoxide override
+alias n='nvim .'
+alias vim='nvim'
 
 # zoxide override
 alias cd='z'

@@ -10,6 +10,7 @@ vim.g.maplocalleader = ' '
 
 -- Set highlight on search
 opt.hlsearch = false
+opt.incsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -17,15 +18,13 @@ vim.wo.number = true
 -- Enable mouse mode
 opt.mouse = 'a'
 
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-opt.clipboard = 'unnamedplus'
-
 -- Enable break indent
 opt.breakindent = true
 
--- Save undo history
+-- No backup, undo history though
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
@@ -50,11 +49,11 @@ opt.relativenumber = true
 
 -- Spaces for tabs etc
 opt.expandtab = true
-opt.tabstop = 2
-opt.softtabstop = 2
+opt.tabstop = 4
+opt.softtabstop = 4
 opt.smartindent = true
 opt.shiftround = true
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 
 -- 80 width column
 opt.textwidth = 80
