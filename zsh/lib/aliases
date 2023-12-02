@@ -2,8 +2,10 @@
 alias ..='cd ..'
 alias _='cd -'
 
-# zoxide override
-alias n='nvim .'
+# neovim
+alias n='nvim'
+alias vi='nvim'
+alias v='nvim'
 alias vim='nvim'
 
 # zoxide override
