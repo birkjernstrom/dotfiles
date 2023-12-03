@@ -34,6 +34,9 @@ opt.smartcase = true
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
 
+-- No text wrapping
+opt.wrap = false
+
 -- Decrease update time
 opt.updatetime = 250
 opt.timeoutlen = 300
