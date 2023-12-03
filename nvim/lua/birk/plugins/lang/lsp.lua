@@ -1,3 +1,9 @@
+-- NOTE: This is where your plugins related to LSP can be installed.
+--  The configuration is done below. Search for lspconfig to find it below.
+-- NOTE: This is where your plugins related to LSP can be installed.
+--  The configuration is done below. Search for lspconfig to find it below.
+-- NOTE: This is where your plugins related to LSP can be installed.
+--  The configuration is done below. Search for lspconfig to find it below.
 return
 -- NOTE: This is where your plugins related to LSP can be installed.
 --  The configuration is done below. Search for lspconfig to find it below.
@@ -34,18 +40,18 @@ return
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
       end
 
-      nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-      nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+      nmap('<leader>rn', vim.lsp.buf.rename, 'Rename')
+      nmap('<leader>ca', vim.lsp.buf.code_action, 'Code Action')
 
-      nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-      nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-      nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-      nmap('<leader>dt', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-      nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-      nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+      nmap('gd', require('telescope.builtin').lsp_definitions, 'Goto Definition')
+      nmap('gr', require('telescope.builtin').lsp_references, 'Goto References')
+      nmap('gI', require('telescope.builtin').lsp_implementations, 'Goto Implementation')
+      nmap('<leader>dt', require('telescope.builtin').lsp_type_definitions, 'Type Definition')
+      nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, 'Document Symbols')
+      nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Workspace Symbols')
 
       -- Diagnostic keymaps
-      nmap('<leader>D', '<cmd>Telescope diagnostics bufnr=0<CR>', '[D]iagnostics of current buffer')
+      nmap('<leader>D', '<cmd>Telescope diagnostics bufnr=0<CR>', 'Diagnostics of current buffer')
       nmap('<leader>d', vim.diagnostic.open_float, 'Open floating diagnostic message')
       nmap('[d', vim.diagnostic.goto_prev, 'Go to previous diagnostic message')
       nmap(']d', vim.diagnostic.goto_next, 'Go to next diagnostic message')
@@ -56,7 +62,7 @@ return
       nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
       -- Lesser used LSP functionality
-      nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+      nmap('gD', vim.lsp.buf.declaration, 'Goto Declaration')
       nmap('<leader>rs', ':LspRestart<CR>', 'Restart LSP Server')
 
       -- Create a command `:Format` local to the LSP buffer
@@ -64,7 +70,6 @@ return
         vim.lsp.buf.format()
       end, { desc = 'Format current buffer with LSP' })
     end
-
 
     -- mason-lspconfig requires that these setup functions are called in this order
     -- before setting up the servers.
