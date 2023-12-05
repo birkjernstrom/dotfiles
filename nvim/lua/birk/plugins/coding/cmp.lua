@@ -25,7 +25,7 @@ return {
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
 
-      -- GitHub Copilot
+      -- Copilot
       {
         'zbirenbaum/copilot-cmp',
         dependencies = 'copilot.lua',
@@ -63,7 +63,7 @@ return {
             select = true,
           },
           ['<Tab>'] = cmp.mapping(function(fallback)
-            if cmp.visile() and has_words_before() then
+            if cmp.visible() and has_words_before() then
               cmp.select_next_item { behavior = cmp.SelectBehavior.Select }
             elseif cmp.visible() then
               cmp.select_next_item()
