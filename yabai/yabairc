@@ -48,10 +48,28 @@ yabai -m config \
 	mouse_action2 resize \
 	mouse_drop_action swap
 
+
+# Apps to ignore from tiling
 yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Digital Colour Meter$" manage=off
 yabai -m rule --add app="^Loom$" manage=off
+
+# Open apps in particular spaces
+yabai -m rule --add app="^Wezterm" space=1
+yabai -m rule --add app="^Google Chrome" space=2
+
+yabai -m rule --add app="^Figma" space=3
+yabai -m rule --add app="^Pitch" space=3
+
+yabai -m rule --add app="^Discord" space=4
+
+yabai -m rule --add app="^Cron" space=5
+yabai -m rule --add app="^Todoist" space=5
+
+yabai -m rule --add app="^Spotify" space=6
+
