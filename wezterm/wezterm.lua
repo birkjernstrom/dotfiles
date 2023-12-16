@@ -59,6 +59,9 @@ local config = {
 		cmd_alt_tmux_prefix("c", "c"),
 		cmd_alt_tmux_prefix("x", "x"),
 		cmd_alt_tmux_prefix(",", ","),
+
+		-- Pane Management
+		cmd_alt_tmux_prefix("m", "m"), -- Zoom pane
 	},
 }
 
