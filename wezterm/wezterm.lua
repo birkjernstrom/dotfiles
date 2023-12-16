@@ -9,11 +9,10 @@ local config = {
 	colors = rose_pine.colors(),
 	window_decorations = "RESIZE",
 	window_frame = rose_pine.window_frame(),
-	window_background_opacity = 0.9,
 	window_padding = {
-		left = 30,
-		right = 30,
-		top = 30,
+		left = 20,
+		right = 20,
+		top = 20,
 		bottom = 10,
 	},
 
