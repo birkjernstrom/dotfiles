@@ -23,11 +23,8 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'birk.plugins' },
-  { import = 'birk.plugins.editor' },
   { import = 'birk.plugins.lang' },
-  { import = 'birk.plugins.coding' },
-  { import = 'birk.plugins.ui' },
-  { import = 'birk.plugins.ui.colorschemes' },
+  { import = 'birk.plugins.colorschemes' },
 }, {
   checker = {
     enabled = true,
