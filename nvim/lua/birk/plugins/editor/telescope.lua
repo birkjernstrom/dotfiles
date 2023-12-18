@@ -63,8 +63,9 @@ return {
             i = {
               -- Josean Martinez
               -- https://www.youtube.com/watch?v=NL8D8EkphUw&t=17s
-              ['<C-k>'] = actions.move_selection_previous,
-              ['<C-j>'] = actions.move_selection_next,
+              -- Modified to M instead of C to support tmux+vim navigation
+              ['<M-k>'] = actions.move_selection_previous,
+              ['<M-j>'] = actions.move_selection_next,
               ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
             },
           },
