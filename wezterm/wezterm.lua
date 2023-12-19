@@ -21,7 +21,12 @@ end
 local config = {
 	adjust_window_size_when_changing_font_size = false,
 
-	font = wezterm.font("BerkeleyMono Nerd Font Mono", { weight = "Regular", italic = false }),
+	font = wezterm.font({
+		family = "BerkeleyMono Nerd Font Mono",
+		weight = "Regular",
+		italic = false,
+		harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" },
+	}),
 	font_size = 14,
 	colors = rose_pine.colors(),
 	window_decorations = "RESIZE",
