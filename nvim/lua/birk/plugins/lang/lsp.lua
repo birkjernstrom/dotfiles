@@ -4,6 +4,8 @@
 --  The configuration is done below. Search for lspconfig to find it below.
 -- NOTE: This is where your plugins related to LSP can be installed.
 --  The configuration is done below. Search for lspconfig to find it below.
+-- NOTE: This is where your plugins related to LSP can be installed.
+--  The configuration is done below. Search for lspconfig to find it below.
 return
 -- NOTE: This is where your plugins related to LSP can be installed.
 --  The configuration is done below. Search for lspconfig to find it below.
@@ -88,7 +90,7 @@ return
       -- clangd = {},
       -- gopls = {},
       pyright = { filetypes = { 'python' } },
-      ruff_lsp = { filestypes = { 'python' } },
+      ruff_lsp = { filetypes = { 'python' } },
       rust_analyzer = {},
       tsserver = {},
       tailwindcss = {},

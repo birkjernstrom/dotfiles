@@ -24,14 +24,14 @@ return {
           require('conform').format { async = true, lsp_fallback = true }
         end,
         mode = '',
-        desc = '[C]ode [F]ormat',
+        desc = 'Code Format',
       },
     },
     opts = {
       -- Everything in opts will be passed to setup()
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { 'ruff' },
+        python = { 'ruff-lsp' },
         javascript = { { 'prettierd', 'prettier' } },
         typescript = { { 'prettierd', 'prettier' } },
         javascriptreact = { { 'prettierd', 'prettier' } },
