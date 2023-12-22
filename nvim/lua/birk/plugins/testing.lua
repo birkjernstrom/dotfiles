@@ -2,15 +2,6 @@
 
 return {
   {
-    'folke/which-key.nvim',
-    optional = true,
-    opts = {
-      defaults = {
-        ['<leader>t'] = { name = '+test' },
-      },
-    },
-  },
-  {
     'nvim-neotest/neotest',
     opts = {
       -- Can be a list of adapters like what neotest expects,
