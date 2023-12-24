@@ -1,0 +1,6 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "nvim-treesitter": { "branch": "master", "commit": "27f68c0b6a87cbad900b3d016425450af8268026" },
+  "nvim-treesitter-textobjects": { "branch": "master", "commit": "bb020f6133f90c8adfd8ca28eb48f0516638abec" },
+  "rose-pine": { "branch": "main", "commit": "92762f4fa2144c05db760ea254f4c399a56a7ef5" }
+}
