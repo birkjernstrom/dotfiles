@@ -17,6 +17,20 @@ return {
       })
     end,
   },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      signs = false,
+    },
+    -- stylua: ignore
+    keys = {
+      { "]t", function() require("todo-comments").jump_next() end, desc = 'Next todo comment' },
+      { "[t", function() require("todo-comments").jump_prev() end, desc = 'Previous todo comment' },
+      { "<leader>ft", ":TodoTelescope<CR>", desc = 'Find all todo comments' },
+      { "<leader>xt", ":TodoQuickFix<CR>", desc = 'Quickfix all todo comments' }
+    },
+  },
   -- Split/join blocks of code
   {
     "Wansmer/treesj",
