@@ -12,9 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { import = "birk.plugins" },
+  { import = "birk.plugins" },
 }, {
-    change_detection = {
-        notify = false,
-    }
+  change_detection = {
+    notify = false,
+  },
 })
