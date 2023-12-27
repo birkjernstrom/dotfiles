@@ -9,7 +9,7 @@ local cmd_alt_tmux_prefix = function(key, tmux_key)
 		key = "s",
 	}
 	return {
-		mods = "ALT|SHIFT",
+		mods = "ALT|CTRL",
 		key = key,
 		action = wt_action.Multiple({
 			wt_action.SendKey({ mods = tmux_leader.mod, key = tmux_leader.key }),
