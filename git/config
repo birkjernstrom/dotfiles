@@ -8,7 +8,13 @@
 [user]
     name = Birk Jernström
     email = birkjernstrom@gmail.com
-    signingkey = birkjernstrom@gmail.com
+    signingkey = ~/.ssh/github.pub
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 
 [commit]
     gpgsign = true

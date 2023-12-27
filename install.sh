@@ -17,6 +17,16 @@ function bind {
 DOTFILES=".dotfiles"
 cd $DOTFILES
 
+# 1password SSH
+if [[ ! -L "${HOME}/.1password/agent.sock" ]]; then
+  if [[ ! -d "${HOME}/.1password" ]]; then
+    mkdir -p "${HOME}/.1password"
+  fi
+  	
+  ln -s "${HOMEE}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" "${HOME}/.1password/agent.sock"
+fi
+bind "${HOME}/.ssh/config" "${HOME}/${DOTFILES}/ssh/config"
+
 # Brew install
 echo "==> Brew install"
 brew bundle install
