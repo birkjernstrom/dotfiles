@@ -1,6 +1,10 @@
+local JSONUtil = require("birk.utils.json")
+
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+
     {
       "rcarriga/nvim-dap-ui",
       -- stylua: ignore
@@ -10,7 +14,9 @@ return {
       },
       opts = {},
       config = function(_, opts)
-        require("dap.ext.vscode").load_launchjs()
+        local vscode = require("dap.ext.vscode")
+        vscode.json_decode = JSONUtil.json_decode
+        vscode.load_launchjs()
 
         local dap = require("dap")
         local dapui = require("dapui")
@@ -30,25 +36,6 @@ return {
       "theHamsta/nvim-dap-virtual-text",
       opts = {},
     },
-    {
-      "jay-babu/mason-nvim-dap.nvim",
-      dependencies = {
-        "williamboman/mason.nvim",
-      },
-      cmd = { "DapInstall", "DapUninstall" },
-      opts = {
-        automatic_installation = true,
-        ensure_installed = {
-          "python",
-        },
-        handlers = {
-          function(config)
-            require("mason-nvim-dap").default_setup(config)
-          end,
-        },
-      },
-    },
-
     {
       "mfussenegger/nvim-dap-python",
       -- stylua: ignore
@@ -78,4 +65,13 @@ return {
     { "<leader>dt", function() require("dap").terminate() end, desc = "Terminate" },
     { "<leader>dw", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
   },
+  config = function()
+    require("mason-tool-installer").setup({
+      ensure_installed = {
+        "debugpy",
+      },
+    })
+    local path = require("mason-registry").get_package("debugpy"):get_install_path()
+    require("dap-python").setup(path .. "/venv/bin/python")
+  end,
 }
