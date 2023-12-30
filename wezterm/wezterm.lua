@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local wt_action = wezterm.action
-local rose_pine = require("rose-pine")
+local kanagawa = require("kanagawa-dragon")
 
 -- Inspiraton from Josh Medeski
 local cmd_alt_tmux_prefix = function(key, tmux_key)
@@ -28,9 +28,8 @@ local config = {
     harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" },
   }),
   font_size = 14,
-  colors = rose_pine.colors(),
+  colors = kanagawa,
   window_decorations = "RESIZE",
-  window_frame = rose_pine.window_frame(),
   window_padding = {
     left = 20,
     right = 20,
