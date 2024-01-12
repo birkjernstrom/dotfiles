@@ -13,7 +13,7 @@ return {
     -- Strategy: Integrated (Default)
     { "<leader>tf", function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run File" },
     { "<leader>tt", function() require("neotest").run.run(vim.loop.cwd()) end, desc = "Run All Test Files" },
-    { "<leader>tn", function() require("neotest").run.run({ strategy = 'dap' }) end, desc = "Run Nearest" },
+    { "<leader>tn", function() require("neotest").run.run() end, desc = "Run Nearest" },
 
     -- Strategy: DAP
     { "<leader>tdf", function() require("neotest").run.run({ vim.fn.expand("%"), strategy = 'dap' }) end, desc = "Run File (DAP)" },
