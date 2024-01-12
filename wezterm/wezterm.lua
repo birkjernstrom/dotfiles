@@ -27,7 +27,7 @@ local config = {
     italic = false,
     harfbuzz_features = { "calt=0", "clig=0", "liga=0", "zero" },
   }),
-  font_size = 14,
+  font_size = 16,
   colors = kanagawa,
   window_decorations = "RESIZE",
   window_padding = {
