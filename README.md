@@ -12,7 +12,7 @@ My ricing is supported by my sponsors.
 
 <!-- POLAR type=ads id=542072 subscription_benefit_id=72bc832c-20e1-4d08-b793-036aaf542072 width=640 height=300 -->
 
-<a href="https://polar.sh/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://polar.sh/embed/ad?id=251f19e6-759b-453e-b96e-d7bfd05af2d9&dark=1"><img src="https://polar.sh/embed/ad?id=251f19e6-759b-453e-b96e-d7bfd05af2d9" alt="The Creator Platform for Developers" height="300" width="640" /></picture></a>
+
 
 <!-- POLAR-END id=542072 -->
 
