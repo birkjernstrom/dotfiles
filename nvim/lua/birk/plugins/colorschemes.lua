@@ -9,7 +9,7 @@ return {
           dark = "dragon",
           light = "lotus",
         },
-        transparent = false,
+        transparent = true,
         terminalColors = false,
         commentStyle = { italic = false },
         keywordStyle = { italic = false },
