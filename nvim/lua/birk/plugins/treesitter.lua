@@ -1,6 +1,5 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  tag = "v0.9.1",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
   dependencies = {
