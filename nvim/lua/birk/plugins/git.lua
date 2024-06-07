@@ -1,11 +1,17 @@
 return {
   -- Git related plugins
   {
-    "tpope/vim-fugitive",
-    keys = {
-      { "<leader>gs", ":Git<CR>", desc = "Git status" },
-      { "<leader>gp", ":Git push<CR>", desc = "Git push" },
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
     },
+    keys = {
+      { "<leader>gs", ":Neogit<CR>", desc = "Git status" },
+      { "<leader>gp", ":Neogit push<CR>", desc = "Git push" },
+    },
+    config = true,
   },
 
   "tpope/vim-rhubarb",
