@@ -45,6 +45,7 @@ return {
       }))
     end, { desc = "Fuzzily search in current buffer" })
     vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, { desc = "Find Help" })
+    vim.keymap.set("n", "<leader>fk", require("telescope.builtin").keymaps, { desc = "Find keymaps" })
     vim.keymap.set("n", "<leader>fw", require("telescope.builtin").grep_string, { desc = "Find current Word" })
     vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Find by Grep" })
     vim.keymap.set("n", "<leader>fd", require("telescope.builtin").diagnostics, { desc = "Find Diagnostics" })
